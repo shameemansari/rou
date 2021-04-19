@@ -8,6 +8,7 @@ $accent-purple: #ecc8f6;
 // Background and Text
 $black: #111111;
 $white: #fdfdfc;
+$grey: #696969;
 $hero-bg: #ebeafa;
 // Icons Color
 $icon-fb: #3b5998;
@@ -45,6 +46,7 @@ $font-weight: (
 // Screens Media
 $mobile: 430px;
 $tablet: 770px;
+$laptop: 1025px;
 
 @mixin mobile {
   @media screen and (max-width: $mobile) {
@@ -54,6 +56,12 @@ $tablet: 770px;
 
 @mixin tablet {
   @media screen and (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media screen and (max-width: $laptop) {
     @content;
   }
 }
@@ -72,10 +80,10 @@ $tablet: 770px;
 
 %cta-btn {
   display: inline-block;
-  width: 200px;
+  width: 160px;
   padding: 10px 20px;
   color: $white;
-  font-size: size(md) - 0.3rem;
+  font-size: size(md) - 0.4rem;
   letter-spacing: 1px;
   font-weight: weight(bold);
   background-color: rgba($primary-color, 0.9);
@@ -85,5 +93,13 @@ $tablet: 770px;
   text-decoration: none;
   &:hover {
     background-color: $primary-color;
+  }
+  @include tablet {
+    padding: 10px;
+    width: 130px;
+    font-size: size(sm) - 0.1rem;
+  }
+  @include mobile {
+    margin: 0 auto;
   }
 }

@@ -1,0 +1,114 @@
+// header with hero body and Control your businesss
+.header {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  // Navbar
+  .navbar {
+    padding: 10px;
+    > .container {
+      width: 920px;
+    }
+    &-brand {
+      img {
+        height: 26px;
+      }
+    }
+    &-toggler {
+      border: none;
+      box-shadow: none;
+      &-icon {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  // Nav Links
+  .nav-item {
+    padding: 10px;
+  }
+  .nav-link {
+    text-align: center;
+    color: $black;
+    text-transform: capitalize;
+    font-weight: weight(semi);
+    font-size: size(sm);
+    &:not(.active) {
+      color: $black;
+    }
+  }
+  .cta-btn1 {
+    display: inline-block;
+    text-decoration: none;
+    font-size: size(sm) - 0.1rem;
+    padding: 5px 20px 4px;
+    border-radius: 5px;
+    border: 2px solid $primary-color;
+    font-weight: weight(bolder);
+    color: $black;
+  }
+  .icons {
+    margin: auto 10px;
+    @include flexrowcenter;
+    &-item {
+      margin: 0 8px;
+    }
+    &-link {
+      color: $black;
+      .fab {
+        font-size: size(sm);
+        &.fb {
+          color: $icon-fb;
+        }
+        &.tw {
+          color: $icon-tw;
+        }
+        &.yt {
+          color: $icon-yt;
+        }
+        &.ig {
+          color: $icon-ig;
+        }
+      }
+    }
+  }
+}
+
+.hero {
+  min-height: 100vh;
+  width: 100%;
+  background: rgba($hero-bg, 0.8);
+  backdrop-filter: blur(5px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & > div {
+    z-index: 3;
+  }
+
+  &-left {
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h1 {
+      font-size: 7rem;
+      font-weight: weight(bolder);
+    }
+    p {
+      font-size: size(md);
+      color: rgb(105, 105, 105);
+      margin: 10px 0 20px;
+    }
+    .cta-btn2 {
+      @extend %cta-btn;
+    }
+  }
+  &-right {
+    img {
+      @include tablet {
+        max-height: 200px;
+      }
+    }
+  }
+}

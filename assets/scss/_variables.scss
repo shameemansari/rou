@@ -1,0 +1,89 @@
+// Main Colors
+$primary-color: #c04ae2;
+$accent-blue: #00aeef;
+$accent-orange: #ff9b32;
+$accent-pink: #ff6687;
+$accent-green: #00c6b5;
+$accent-purple: #ecc8f6;
+// Background and Text
+$black: #111111;
+$white: #fdfdfc;
+$hero-bg: #ebeafa;
+// Icons Color
+$icon-fb: #3b5998;
+$icon-tw: #1da1f2;
+$icon-yt: #ff1e00;
+$icon-ig: #e16353;
+
+// Overlay color
+$overlay-1: #e7eef6;
+$overlay-2: #edeef6;
+
+// Font
+$font-size: (
+  'xl': 3rem,
+  'lg': 2.5rem,
+  'md': 2rem,
+  'sm': 1.5rem,
+);
+
+$font-weight: (
+  'bolder': 800,
+  'bold': 700,
+  'semi': 600,
+  'normal': 400,
+);
+
+@function size($size) {
+  @return map-get($font-size, $size);
+}
+
+@function weight($weight) {
+  @return map-get($font-weight, $weight);
+}
+
+// Screens Media
+$mobile: 430px;
+$tablet: 770px;
+
+@mixin mobile {
+  @media screen and (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin flexrowcenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexrowbetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+%cta-btn {
+  display: inline-block;
+  width: 200px;
+  padding: 10px 20px;
+  color: $white;
+  font-size: size(md) - 0.3rem;
+  letter-spacing: 1px;
+  font-weight: weight(bold);
+  background-color: rgba($primary-color, 0.9);
+  box-shadow: 0 2px 5px 1px rgba($black, 0.2);
+  text-align: center;
+  border-radius: 5px;
+  text-decoration: none;
+  &:hover {
+    background-color: $primary-color;
+  }
+}

@@ -66,6 +66,12 @@ $laptop: 1025px;
   }
 }
 
+@mixin flexcolumncenter {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
 @mixin flexrowcenter {
   display: flex;
   justify-content: center;

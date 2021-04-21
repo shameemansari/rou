@@ -1,6 +1,214 @@
-// Most innovative creative team
 .about {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
-  background-color: pink;
+  padding: 10% 0 5%;
+  position: relative;
+  background-color: rgba($overlay-2, 0.2);
+  overflow: hidden;
+  .styleelement {
+    z-index: 1;
+  }
+
+  *:not(.styleelement) {
+    z-index: 2;
+  }
+
+  .circle {
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: -1;
+
+    &-pink1 {
+      top: -10%;
+      right: -5%;
+      background: radial-gradient(rgba($accent-pink, 0.1), rgba($accent-pink, 0.06), rgba($accent-pink, 0.04), transparent 80%);
+    }
+    &-pink2 {
+      height: 600px;
+      width: 600px;
+      bottom: 5%;
+      left: 25%;
+      background: radial-gradient(rgba($accent-pink, 0.1), rgba($accent-pink, 0.06), rgba($accent-pink, 0.04), transparent 80%);
+    }
+    &-blue1 {
+      top: 15%;
+      left: 5%;
+      background: radial-gradient(rgba($accent-blue, 0.1), rgba($accent-blue, 0.06), transparent 80%);
+    }
+  }
+
+  .shape {
+    position: absolute;
+    top: 5%;
+    right: 3%;
+    width: 100px;
+  }
+
+  .curve {
+    position: absolute;
+    top: 250px;
+    left: 8%;
+    width: 15px;
+  }
+
+  .zigzag {
+    width: 35px;
+    position: absolute;
+    top: 8%;
+    right: 2.5%;
+  }
+
+  .triangle {
+    position: absolute;
+    top: 750px;
+    width: 25px;
+    opacity: 0.4;
+    right: 220px;
+  }
+
+  &-title {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    @include tablet {
+      width: 80%;
+    }
+  }
+
+  .business {
+    padding: 20px;
+    max-width: 80%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    @include tablet {
+      max-width: 100%;
+      padding: 0;
+    }
+
+    .card {
+      min-height: 33rem;
+      max-width: 26rem;
+      margin: 20px 10px;
+      border-radius: 15px;
+      padding: 20px;
+      @include tablet {
+        min-height: 30rem;
+        max-width: 24rem;
+      }
+      &.border {
+        &-pink {
+          border: 6px solid rgba($accent-pink, 0.4);
+        }
+        &-green {
+          border: 6px solid rgba($accent-green, 0.4);
+        }
+        &-orange {
+          border: 6px solid rgba($accent-orange, 0.4);
+        }
+      }
+
+      &-body {
+        @include flexcolumnevenly;
+        text-align: center;
+      }
+
+      &-img {
+        max-width: 60px;
+        margin-bottom: 1.5rem;
+        @include tablet {
+          max-width: 45px;
+        }
+      }
+      &-title {
+        font-size: size(lg) - 0.4rem;
+        font-weight: 800;
+        @include tablet {
+          font-size: size(md);
+        }
+      }
+      &-text {
+        font-size: size(sm);
+        font-weight: 600;
+        color: $grey;
+        @include tablet {
+          font-size: size(sm) - 0.2rem;
+        }
+      }
+    }
+  }
 }
+
+.team {
+  padding: 20px 0 10px;
+  min-height: 60vh;
+  @include flexrowcenter;
+  &-left {
+    padding: 20px 0;
+    @include flexcolumnstart;
+    @include tablet {
+      text-align: center;
+      align-items: center;
+    }
+
+    p {
+      font-size: size(sm) - 0.1rem;
+      color: $grey;
+      margin: 5px 0;
+      width: 80%;
+      &:first-of-type {
+        font-size: size(sm) + 0.1rem;
+      }
+    }
+
+    .cta-btn2 {
+      @extend %cta-btn2;
+      text-transform: uppercase;
+      margin: 20px 0 0;
+      font-size: size(sm) - 0.3rem;
+    }
+  }
+
+  &-right {
+    height: 50vh;
+    .team-container {
+      height: 100%;
+      width: 100%;
+      position: relative;
+      .innovate {
+        position: absolute;
+        height: 20rem;
+        width: 20rem;
+        max-width: 100%;
+        @include tablet {
+          height: 18rem;
+          width: 18rem;
+        }
+        &-1 {
+          top: 5%;
+          left: 40%;
+          transform: translateX(-65%);
+        }
+        &-2 {
+          bottom: 5%;
+          left: 60%;
+          transform: translateX(-35%);
+        }
+      }
+      .shape {
+        position: absolute;
+        height: 45px;
+        width: 45px;
+        top: 85%;
+        left: 35%;
+        @include tablet {
+          height: 3rem;
+          width: 3rem;
+        }
+      }
+    }
+  }
+}
+/********** Trust End*********/

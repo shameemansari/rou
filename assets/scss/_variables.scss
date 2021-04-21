@@ -17,7 +17,6 @@ $icon-yt: #ff1e00;
 $icon-ig: #e16353;
 
 // Overlay color
-$overlay-1: #e7eef6;
 $overlay-2: #edeef6;
 
 // Font
@@ -28,53 +27,54 @@ $font-size: (
   'sm': 1.5rem,
 );
 
-$font-weight: (
-  'bolder': 800,
-  'bold': 700,
-  'semi': 600,
-  'normal': 400,
-);
+// Queries
+$mobile: 480px;
+$tablet: 768px;
+
+// Functions
 
 @function size($size) {
   @return map-get($font-size, $size);
 }
 
-@function weight($weight) {
-  @return map-get($font-weight, $weight);
-}
+// Flex Box
 
-// Screens Media
-$mobile: 430px;
-$tablet: 770px;
-$laptop: 1025px;
-
-@mixin mobile {
-  @media screen and (max-width: $mobile) {
-    @content;
-  }
-}
-
-@mixin tablet {
-  @media screen and (max-width: $tablet) {
-    @content;
-  }
-}
-
-@mixin laptop {
-  @media screen and (max-width: $laptop) {
-    @content;
-  }
+@mixin flexcolumnstart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 @mixin flexcolumncenter {
   display: flex;
-  justify-content: center;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexcolumnevenly {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+@mixin flexrowstart {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 @mixin flexrowcenter {
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+@mixin flexrowend {
+  display: flex;
+  justify-content: flex-end;
   align-items: center;
 }
 
@@ -84,28 +84,21 @@ $laptop: 1025px;
   align-items: center;
 }
 
-%cta-btn {
-  display: inline-block;
-  width: 160px;
-  padding: 10px 20px;
-  color: $white;
-  font-size: size(md) - 0.4rem;
-  letter-spacing: 1px;
-  font-weight: weight(bold);
-  background-color: rgba($primary-color, 0.9);
-  box-shadow: 0 2px 5px 1px rgba($black, 0.2);
-  text-align: center;
-  border-radius: 5px;
-  text-decoration: none;
-  &:hover {
-    background-color: $primary-color;
+@mixin flexrowaround {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+// Queries
+@mixin mobile {
+  @media screen and (max-width: $mobile) {
+    @content;
   }
-  @include tablet {
-    padding: 10px;
-    width: 130px;
-    font-size: size(sm) - 0.1rem;
-  }
-  @include mobile {
-    margin: 0 auto;
+}
+
+@mixin tablet {
+  @media screen and (max-width: $tablet) {
+    @content;
   }
 }

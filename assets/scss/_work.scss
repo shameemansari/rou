@@ -1,0 +1,18 @@
+.work {
+  min-height: 200vh;
+  width: 100%;
+  background-color: $overlay-3;
+  position: relative;
+  padding: 10rem 0;
+  &-title {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    h3 {
+      margin: 20px;
+    }
+    @include laptop {
+      width: 100%;
+    }
+  }
+}

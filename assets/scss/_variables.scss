@@ -29,11 +29,6 @@ $font-size: (
   'sm': 1.5rem,
 );
 
-// Queries
-$mobile: 480px;
-$tablet: 769px;
-$laptop: 1025px;
-
 // Functions
 
 @function size($size) {
@@ -94,6 +89,11 @@ $laptop: 1025px;
 }
 
 // Queries
+
+$mobile: 480px;
+$tablet: 769px;
+$laptop: 1025px;
+
 @mixin mobile {
   @media screen and (max-width: $mobile) {
     @content;

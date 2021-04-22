@@ -1,0 +1,36 @@
+.service {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+
+  .shape {
+    z-index: -1;
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    transform: scale(0.8);
+  }
+  .arrow {
+    z-index: -1;
+    position: absolute;
+    top: 1.8%;
+    left: 5%;
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+
+  .service-title {
+    width: 50%;
+    margin: 0 auto;
+    text-align: right;
+    h3 {
+      margin: 10px 0 0 auto;
+    }
+    @include laptop {
+      width: 100%;
+      margin: 0;
+      text-align: center;
+    }
+  }
+}

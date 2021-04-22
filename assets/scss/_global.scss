@@ -12,6 +12,7 @@ body {
   font-size: 10px;
   font-family: 'Overpass', sans-serif;
   font-weight: 400;
+  background-color: rgba($white, 0.15);
 }
 
 a {
@@ -31,7 +32,7 @@ img {
 .purple-title {
   margin: 10px 0;
   color: $primary-color;
-  font-size: size(md);
+  font-size: size(md) - 0.2rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -44,8 +45,11 @@ img {
   color: $black;
   font-size: 4.8rem;
   font-weight: 800;
+  @include laptop {
+    font-size: 3.2rem;
+  }
   @include tablet {
-    font-size: size(lg);
+    font-size: size(lg) + 0.2rem;
   }
 }
 

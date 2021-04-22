@@ -17,7 +17,9 @@ $icon-yt: #ff1e00;
 $icon-ig: #e16353;
 
 // Overlay color
+$overlay-1: #dee8f3;
 $overlay-2: #edeef6;
+$overlay-3: #edf1f7;
 
 // Font
 $font-size: (
@@ -29,7 +31,8 @@ $font-size: (
 
 // Queries
 $mobile: 480px;
-$tablet: 768px;
+$tablet: 769px;
+$laptop: 1025px;
 
 // Functions
 
@@ -99,6 +102,12 @@ $tablet: 768px;
 
 @mixin tablet {
   @media screen and (max-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media screen and (max-width: $laptop) {
     @content;
   }
 }

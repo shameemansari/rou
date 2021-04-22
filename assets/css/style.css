@@ -13,6 +13,7 @@ body {
   font-size: 10px;
   font-family: 'Overpass', sans-serif;
   font-weight: 400;
+  background-color: rgba(253, 253, 252, 0.15);
 }
 
 a {
@@ -32,13 +33,13 @@ img {
 .purple-title {
   margin: 10px 0;
   color: #c04ae2;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 3px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
   .purple-title {
     font-size: 1.5rem;
   }
@@ -50,9 +51,15 @@ img {
   font-weight: 800;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1025px) {
   .black-title {
-    font-size: 2.5rem;
+    font-size: 3.2rem;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .black-title {
+    font-size: 2.7rem;
   }
 }
 
@@ -200,7 +207,7 @@ img {
           align-items: center;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
   .hero {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -233,7 +240,7 @@ img {
           align-items: flex-start;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
   .hero-left {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -247,7 +254,7 @@ img {
   font-weight: 800;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
   .hero-left-title {
     font-size: 4.8rem;
   }
@@ -265,7 +272,7 @@ img {
   margin: 10px 0 20px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
   .hero-left-subtitle {
     font-size: 2rem;
   }
@@ -277,7 +284,7 @@ img {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
   .hero-left .cta-btn2 {
     font-size: 1.2rem;
   }
@@ -545,10 +552,9 @@ img {
 .about {
   min-height: 100vh;
   width: 100%;
-  padding: 10% 0 5%;
+  padding: 10% 0;
   position: relative;
-  background-color: rgba(237, 238, 246, 0.2);
-  overflow: hidden;
+  background-color: rgba(235, 234, 250, 0.2);
 }
 
 .about .styleelement {
@@ -559,12 +565,56 @@ img {
   z-index: 2;
 }
 
+.about-bg {
+  position: absolute;
+  z-index: -1 !important;
+}
+
+.about-bg1 {
+  top: 35%;
+  width: 60%;
+  right: -10%;
+}
+
+@media screen and (max-width: 1025px) {
+  .about-bg1 {
+    width: 100%;
+    right: 0;
+  }
+}
+
+.about-bg2 {
+  top: 70%;
+  width: 80%;
+  right: -5%;
+}
+
+@media screen and (max-width: 1025px) {
+  .about-bg2 {
+    width: 100%;
+    right: 0;
+  }
+}
+
+.about-bg3 {
+  left: 0;
+  top: 70%;
+  z-index: -1;
+  width: 80%;
+}
+
+@media screen and (max-width: 1025px) {
+  .about-bg3 {
+    width: 100%;
+  }
+}
+
 .about .circle {
   height: 400px;
   width: 400px;
   border-radius: 50%;
   position: absolute;
-  z-index: -1;
+  z-index: 1;
 }
 
 .about .circle-pink1 {
@@ -598,7 +648,13 @@ img {
   position: absolute;
   top: 250px;
   left: 8%;
-  width: 15px;
+  width: 14px;
+}
+
+@media screen and (max-width: 769px) {
+  .about .curve {
+    width: 8px;
+  }
 }
 
 .about .zigzag {
@@ -622,7 +678,7 @@ img {
   text-align: center;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
   .about-title {
     width: 80%;
   }
@@ -640,7 +696,7 @@ img {
           align-items: center;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
   .about .business {
     max-width: 100%;
     padding: 0;
@@ -655,7 +711,7 @@ img {
   padding: 20px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
   .about .business .card {
     min-height: 30rem;
     max-width: 24rem;
@@ -696,7 +752,7 @@ img {
   margin-bottom: 1.5rem;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
   .about .business .card-img {
     max-width: 45px;
   }
@@ -707,7 +763,7 @@ img {
   font-weight: 800;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
   .about .business .card-title {
     font-size: 2rem;
   }
@@ -719,7 +775,7 @@ img {
   color: #696969;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
   .about .business .card-text {
     font-size: 1.3rem;
   }
@@ -756,7 +812,7 @@ img {
           align-items: flex-start;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1025px) {
   .team-left {
     text-align: center;
     -webkit-box-align: center;
@@ -783,7 +839,14 @@ img {
 }
 
 .team-right {
-  height: 50vh;
+  height: 420px;
+  margin: 20px 0;
+}
+
+@media screen and (max-width: 1025px) {
+  .team-right {
+    height: 240px;
+  }
 }
 
 .team-right .team-container {
@@ -794,27 +857,34 @@ img {
 
 .team-right .team-container .innovate {
   position: absolute;
-  height: 20rem;
-  width: 20rem;
+  height: 26rem;
+  width: 26rem;
   max-width: 100%;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1025px) {
   .team-right .team-container .innovate {
     height: 18rem;
     width: 18rem;
   }
 }
 
+@media screen and (max-width: 480px) {
+  .team-right .team-container .innovate {
+    height: 14rem;
+    width: 14rem;
+  }
+}
+
 .team-right .team-container .innovate-1 {
-  top: 5%;
+  top: 0%;
   left: 40%;
   -webkit-transform: translateX(-65%);
           transform: translateX(-65%);
 }
 
 .team-right .team-container .innovate-2 {
-  bottom: 5%;
+  bottom: 0%;
   left: 60%;
   -webkit-transform: translateX(-35%);
           transform: translateX(-35%);
@@ -825,14 +895,63 @@ img {
   height: 45px;
   width: 45px;
   top: 85%;
-  left: 35%;
+  left: 25%;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1025px) {
   .team-right .team-container .shape {
     height: 3rem;
     width: 3rem;
+    left: 40%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .team-right .team-container .shape {
+    left: 24%;
   }
 }
 
 /********** Trust End*********/
+.service {
+  min-height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: 2;
+}
+
+.service .shape {
+  z-index: -1;
+  position: absolute;
+  top: 2%;
+  left: 2%;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+}
+
+.service .arrow {
+  z-index: -1;
+  position: absolute;
+  top: 1.8%;
+  left: 5%;
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.service .service-title {
+  width: 50%;
+  margin: 0 auto;
+  text-align: right;
+}
+
+.service .service-title h3 {
+  margin: 10px 0 0 auto;
+}
+
+@media screen and (max-width: 1025px) {
+  .service .service-title {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+  }
+}

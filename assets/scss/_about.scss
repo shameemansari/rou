@@ -1,10 +1,9 @@
 .about {
   min-height: 100vh;
   width: 100%;
-  padding: 10% 0 5%;
+  padding: 10% 0;
   position: relative;
-  background-color: rgba($overlay-2, 0.2);
-  overflow: hidden;
+  background-color: rgba($hero-bg, 0.2);
   .styleelement {
     z-index: 1;
   }
@@ -13,12 +12,44 @@
     z-index: 2;
   }
 
+  &-bg {
+    position: absolute;
+    z-index: -1 !important;
+    &1 {
+      top: 35%;
+      width: 60%;
+      right: -10%;
+      @include laptop {
+        width: 100%;
+        right: 0;
+      }
+    }
+    &2 {
+      top: 70%;
+      width: 80%;
+      right: -5%;
+      @include laptop {
+        width: 100%;
+        right: 0;
+      }
+    }
+    &3 {
+      left: 0;
+      top: 70%;
+      z-index: -1;
+      width: 80%;
+      @include laptop {
+        width: 100%;
+      }
+    }
+  }
+
   .circle {
     height: 400px;
     width: 400px;
     border-radius: 50%;
     position: absolute;
-    z-index: -1;
+    z-index: 1;
 
     &-pink1 {
       top: -10%;
@@ -50,7 +81,10 @@
     position: absolute;
     top: 250px;
     left: 8%;
-    width: 15px;
+    width: 14px;
+    @include tablet {
+      width: 8px;
+    }
   }
 
   .zigzag {
@@ -148,7 +182,7 @@
   &-left {
     padding: 20px 0;
     @include flexcolumnstart;
-    @include tablet {
+    @include laptop {
       text-align: center;
       align-items: center;
     }
@@ -172,27 +206,35 @@
   }
 
   &-right {
-    height: 50vh;
+    height: 420px;
+    margin: 20px 0;
+    @include laptop {
+      height: 240px;
+    }
     .team-container {
       height: 100%;
       width: 100%;
       position: relative;
       .innovate {
         position: absolute;
-        height: 20rem;
-        width: 20rem;
+        height: 26rem;
+        width: 26rem;
         max-width: 100%;
-        @include tablet {
+        @include laptop {
           height: 18rem;
           width: 18rem;
         }
+        @include mobile {
+          height: 14rem;
+          width: 14rem;
+        }
         &-1 {
-          top: 5%;
+          top: 0%;
           left: 40%;
           transform: translateX(-65%);
         }
         &-2 {
-          bottom: 5%;
+          bottom: 0%;
           left: 60%;
           transform: translateX(-35%);
         }
@@ -202,10 +244,14 @@
         height: 45px;
         width: 45px;
         top: 85%;
-        left: 35%;
-        @include tablet {
+        left: 25%;
+        @include laptop {
           height: 3rem;
           width: 3rem;
+          left: 40%;
+        }
+        @include mobile {
+          left: 24%;
         }
       }
     }

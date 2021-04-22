@@ -15,3 +15,11 @@ window.addEventListener('load', (e) => {
     navbar.classList.remove('show');
   }
 });
+
+window.addEventListener('resize', (e) => {
+  if (window.innerWidth < 992) {
+    navbar.classList.add('show');
+  } else {
+    navbar.classList.remove('show');
+  }
+});

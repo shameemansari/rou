@@ -8,6 +8,9 @@
     top: 8rem;
     bottom: 8rem;
   }
+  @include tablet {
+    padding: 4rem auto;
+  }
 
   &-element {
     z-index: -1;
@@ -100,16 +103,22 @@
     }
     &-image {
       height: auto;
-      max-width: 29rem;
-      @include mobile {
-        padding: 1rem 2.5rem;
+      max-width: 28rem;
+      @include tablet {
+        max-width: 20rem;
       }
     }
     &-main {
+      @include tablet {
+        text-align: center;
+      }
       .problem-title {
         margin: 2rem 0;
         font-size: size(md) - 0.1rem;
         font-weight: 800;
+        @include tablet {
+          font-size: size(sm);
+        }
         &-pink {
           color: $accent-pink;
         }
@@ -124,20 +133,30 @@
         font-weight: 800;
         margin: 1rem 0;
         font-size: size(md);
+        @include tablet {
+          font-size: size(sm);
+        }
       }
       p {
-        font-size: size(sm) - 0.1rem;
+        font-size: size(sm) - 0.15rem;
         margin: 1rem 0;
       }
       .cta-btn1 {
         @extend %cta-btn1;
         padding: 0.8rem 2.5rem;
+        @include tablet {
+          padding: 0.5rem 2rem;
+          font-size: size(sm) - 0.2rem;
+        }
       }
     }
   }
   .sub-text {
     text-align: center;
-    margin: 5rem 0 2rem;
+    margin: 5rem 0 0;
+    @include tablet {
+      margin: 5rem 0 0;
+    }
     &-1 {
       @extend %sub-text;
     }

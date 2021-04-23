@@ -4,7 +4,9 @@ window.addEventListener('scroll', (e) => {
   if (window.pageYOffset > 0) {
     navbar.classList.add('show');
   } else {
-    navbar.classList.remove('show');
+    if (window.innerWidth > 992) {
+      navbar.classList.remove('show');
+    }
   }
 });
 

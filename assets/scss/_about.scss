@@ -195,6 +195,9 @@
       &:first-of-type {
         font-size: size(sm) + 0.1rem;
       }
+      @include tablet {
+        text-align: left;
+      }
     }
 
     .cta-btn2 {

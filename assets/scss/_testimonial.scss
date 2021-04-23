@@ -1,0 +1,151 @@
+.testimonial {
+  min-height: 75rem;
+  width: 100%;
+  position: relative;
+  padding: 10rem 0 0;
+  z-index: 2;
+  @include tablet {
+    padding: 3rem 0;
+  }
+
+  .z-index-1 {
+    z-index: -1;
+  }
+
+  .arrow {
+    position: absolute;
+    max-width: 2.3rem;
+    top: 24rem;
+    left: 24rem;
+  }
+  .shape {
+    position: absolute;
+    max-width: 8rem;
+    top: 50%;
+    left: 14rem;
+  }
+  .triangle {
+    position: absolute;
+    max-width: 3rem;
+    top: 58%;
+    left: 19.35rem;
+  }
+  .zigzag {
+    position: absolute;
+    max-width: 4rem;
+    top: 68%;
+    right: 15%;
+  }
+  .square {
+    position: absolute;
+    height: 3rem;
+    width: 3rem;
+    border: 4px solid $accent-blue;
+    bottom: -1rem;
+    right: 15%;
+    transform: rotate(55deg);
+  }
+
+  &-title {
+    margin: 0 auto;
+    text-align: center;
+    width: 60%;
+    @include tablet {
+      width: 100%;
+    }
+  }
+
+  &-team {
+    min-height: 35rem;
+    &-shape {
+      height: 3rem;
+      width: 4rem;
+    }
+  }
+
+  .person {
+    height: 29rem;
+    width: 20rem;
+    margin: 1rem 0.8rem;
+    padding: 1rem;
+    &-image {
+      max-width: 19rem;
+      @include tablet {
+        max-width: 17rem;
+      }
+    }
+    &-title {
+      font-size: size(sm);
+      font-weight: 800;
+      margin: 2rem auto 0.6rem;
+    }
+    &-subtitle {
+      font-size: size(sm) - 0.15rem;
+      color: #808080e0;
+      font-weight: 600;
+    }
+  }
+
+  &-content {
+    min-height: 70rem;
+    position: relative;
+    overflow: hidden;
+    > .row {
+      min-height: 50rem;
+      @include flexrowcenter;
+    }
+    .testimonial-bg {
+      z-index: -2;
+      position: absolute;
+      &-1 {
+        bottom: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+      }
+      &-2 {
+        bottom: 0;
+        right: 40rem;
+        height: 40rem;
+        width: 60rem;
+      }
+      &-3 {
+        bottom: 0;
+        right: 0;
+        height: 40rem;
+        width: 60rem;
+      }
+    }
+
+    .testimonial-image {
+      min-height: 45rem;
+      position: relative;
+      background-color: pink;
+      @include mobile {
+        min-height: 32rem;
+      }
+      &-1 {
+        max-width: 28rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        @include tablet {
+          max-width: 22rem;
+        }
+      }
+      &-2 {
+        max-width: 18rem;
+        position: absolute;
+        top: 65%;
+        left: calc(13% - 2rem);
+        @include tablet {
+          max-width: 13rem;
+          left: 35%;
+          transform: translateX(-65%);
+        }
+      }
+    }
+  }
+}

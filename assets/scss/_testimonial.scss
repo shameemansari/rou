@@ -2,7 +2,6 @@
   min-height: 75rem;
   width: 100%;
   position: relative;
-  padding: 10rem 0 0;
   z-index: 2;
   @include tablet {
     padding: 3rem 0;
@@ -15,19 +14,18 @@
   .circle {
     height: 350px;
     width: 350px;
-    z-index: 1 !important;
     border-radius: 50%;
     position: absolute;
     z-index: -2;
     &-pink1 {
-      top: -15%;
-      left: -5%;
+      top: 15%;
+      left: 5%;
       background: radial-gradient(rgba($accent-pink, 0.1), rgba($accent-pink, 0.06), rgba($accent-pink, 0.04), transparent 80%);
     }
 
     &-blue1 {
-      top: 15%;
-      left: 5%;
+      top: 30%;
+      right: 10%;
       background: radial-gradient(rgba($accent-blue, 0.1), rgba($accent-blue, 0.05), transparent 80%);
     }
   }
@@ -72,6 +70,7 @@
 
   &-title {
     margin: 0 auto;
+    padding-top: 10rem;
     text-align: center;
     width: 60%;
     @include tablet {
@@ -111,9 +110,10 @@
   }
 
   &-content {
-    min-height: 70rem;
+    min-height: 60rem;
     position: relative;
     overflow: hidden;
+    background: linear-gradient(to top, rgba($overlay-3, 0.8), transparent 40%);
     > .row {
       min-height: 50rem;
       @include flexrowcenter;
@@ -130,7 +130,7 @@
       }
       &-2 {
         bottom: 0;
-        right: 40rem;
+        right: 20rem;
         height: 40rem;
         width: 60rem;
       }

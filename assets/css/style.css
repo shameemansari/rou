@@ -14,7 +14,7 @@ body {
   font-size: 10px;
   font-family: 'Overpass', sans-serif;
   font-weight: 400;
-  background-color: rgba(237, 238, 246, 0.1);
+  background-color: rgba(237, 238, 246, 0.2);
 }
 
 a {
@@ -1311,7 +1311,6 @@ img {
   min-height: 75rem;
   width: 100%;
   position: relative;
-  padding: 10rem 0 0;
   z-index: 2;
 }
 
@@ -1328,21 +1327,20 @@ img {
 .testimonial .circle {
   height: 350px;
   width: 350px;
-  z-index: 1 !important;
   border-radius: 50%;
   position: absolute;
   z-index: -2;
 }
 
 .testimonial .circle-pink1 {
-  top: -15%;
-  left: -5%;
+  top: 15%;
+  left: 5%;
   background: radial-gradient(rgba(255, 102, 135, 0.1), rgba(255, 102, 135, 0.06), rgba(255, 102, 135, 0.04), transparent 80%);
 }
 
 .testimonial .circle-blue1 {
-  top: 15%;
-  left: 5%;
+  top: 30%;
+  right: 10%;
   background: radial-gradient(rgba(0, 174, 239, 0.1), rgba(0, 174, 239, 0.05), transparent 80%);
 }
 
@@ -1387,6 +1385,7 @@ img {
 
 .testimonial-title {
   margin: 0 auto;
+  padding-top: 10rem;
   text-align: center;
   width: 60%;
 }
@@ -1436,9 +1435,11 @@ img {
 }
 
 .testimonial-content {
-  min-height: 70rem;
+  min-height: 60rem;
   position: relative;
   overflow: hidden;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(237, 241, 247, 0.8)), color-stop(40%, transparent));
+  background: linear-gradient(to top, rgba(237, 241, 247, 0.8), transparent 40%);
 }
 
 .testimonial-content > .row {
@@ -1469,7 +1470,7 @@ img {
 
 .testimonial-content .testimonial-bg-2 {
   bottom: 0;
-  right: 40rem;
+  right: 20rem;
   height: 40rem;
   width: 60rem;
 }

@@ -1,4 +1,169 @@
-// .contact {
-//   min-height: 75rem;
-//   width: 100%;
-// }
+.contact {
+  min-height: 75rem;
+  width: 100%;
+  background-color: $white;
+  position: relative;
+  padding: 10rem 0;
+  overflow: hidden;
+  z-index: 1;
+  @include tablet {
+    padding: 4rem 0 3rem;
+  }
+
+  .z-index-1 {
+    z-index: -1;
+  }
+
+  &-bg {
+    position: absolute;
+    right: 0;
+    width: 60%;
+    height: 60%;
+    top: 60%;
+    right: -1rem;
+    transform: translateY(-50%);
+  }
+  .circle {
+    height: 400px;
+    width: 400px;
+    border-radius: 50%;
+    position: absolute;
+    z-index: -2;
+    &-pink1 {
+      top: 20%;
+      left: 10%;
+      background: radial-gradient(rgba($accent-pink, 0.1), rgba($accent-pink, 0.05), transparent 80%);
+    }
+
+    &-blue1 {
+      top: 60%;
+      left: 12%;
+      background: radial-gradient(rgba($accent-blue, 0.1), rgba($accent-blue, 0.05), transparent 80%);
+    }
+  }
+
+  .zigzag {
+    position: absolute;
+    bottom: 16%;
+    right: 9%;
+    max-width: 3rem;
+  }
+
+  .shape {
+    position: absolute;
+    bottom: 10%;
+    max-width: 10rem;
+    right: 5%;
+  }
+
+  .triangle {
+    position: absolute;
+    max-width: 2.5rem;
+    top: 40%;
+    left: 5%;
+  }
+
+  &-title {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    @include laptop {
+      width: 100%;
+    }
+  }
+
+  &-content {
+    min-height: 50rem;
+    @include flexrowcenter;
+
+    &-left {
+      margin: 2rem 0;
+      @include tablet {
+        text-align: center;
+      }
+      h3 {
+        font-size: size(xl);
+        font-weight: 800;
+        padding: 2rem;
+        @include tablet {
+          font-size: size(md);
+        }
+      }
+      .input-element {
+        display: inline-block;
+        margin: 2rem 0;
+        width: 80%;
+        border: none;
+        resize: none;
+        padding: 1rem 2rem;
+        min-height: 4rem;
+        filter: drop-shadow(0 0 5px rgba($black, 0.1));
+        font-size: size(sm);
+        &::placeholder {
+          background-color: $white;
+          height: 100%;
+          font-size: size(sm) - 0.2rem;
+          font-weight: 600;
+          color: $grey2;
+        }
+      }
+      textarea {
+        height: 12rem;
+      }
+      .cta-btn2 {
+        @extend %cta-btn2;
+        font-size: size(sm) - 0.1rem;
+        padding: 1rem 2rem;
+      }
+    }
+    &-right {
+      margin: 2rem 0;
+      .contact-main {
+        padding: 0 2rem;
+        &-box {
+          display: flex;
+          align-items: center;
+          margin: 3rem 0;
+        }
+        &-icon {
+          display: inline-block;
+          width: 3rem;
+          height: 3rem;
+          border-radius: 50%;
+          margin-right: 1.5rem;
+          @include flexrowcenter;
+          i {
+            font-size: 1rem;
+            color: $white;
+          }
+          &-1 {
+            background-color: $accent-pink;
+          }
+          &-2 {
+            background-color: $accent-green;
+          }
+          &-3 {
+            background-color: $accent-orange;
+          }
+        }
+        &-text {
+          width: 40%;
+          height: 3rem;
+          @include laptop {
+            width: 100%;
+          }
+          h3 {
+            font-size: size(sm);
+            font-weight: 800;
+          }
+          p {
+            font-size: size(sm) - 0.3rem;
+          }
+        }
+      }
+      p {
+        font-size: size(sm);
+      }
+    }
+  }
+}

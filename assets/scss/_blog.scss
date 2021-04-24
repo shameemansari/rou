@@ -1,0 +1,110 @@
+.blog {
+  min-height: 71rem;
+  width: 100%;
+  background-color: rgba($overlay-3, 0.85);
+  position: relative;
+  overflow: hiddens;
+  padding: 10rem 0;
+
+  &-title {
+    width: 80%;
+    margin: 0 auto;
+    @include tablet {
+      width: 95%;
+    }
+    &-sub {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @include mobile {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+      }
+      h3 {
+        width: calc(100% - 7rem);
+        @include mobile {
+          width: 100%;
+          margin: 1rem 0;
+        }
+      }
+      .sub-title {
+        @extend %sub-text;
+        width: 7rem;
+        margin: 1rem 0;
+      }
+    }
+  }
+
+  &-content {
+    min-height: 40rem;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0;
+  }
+
+  &-card {
+    cursor: pointer;
+    border-radius: 2rem;
+    margin: 1rem;
+    padding: 2.5rem 2rem;
+    min-height: 27rem;
+    max-width: 27rem;
+    background-color: transparent;
+    border: 1px solid rgba($grey, 0.2);
+    &.active,
+    &:hover {
+      transition: all 0.3s ease-in-out;
+      border: white;
+      background-color: #fff;
+    }
+    &-title {
+      font-size: size(sm) - 0.2rem;
+      font-weight: 800;
+      &-pink {
+        color: $accent-pink;
+      }
+      &-green {
+        color: $accent-green;
+      }
+      &-orange {
+        color: $accent-orange;
+      }
+    }
+    &-subtitle {
+      font-size: size(sm) 0.1rem;
+      font-weight: 800;
+      margin: 1rem 0;
+    }
+    &-text {
+      margin: 2rem 0;
+      font-size: size(sm) - 0.25rem;
+    }
+    &-sub {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &-image {
+        img {
+          width: 4rem;
+          height: 4rem;
+          object-fit: cover;
+          object-position: center;
+          border-radius: 50%;
+        }
+        span {
+          margin: auto 5px;
+          font-weight: 800;
+          font-size: size(sm) - 0.15rem;
+        }
+      }
+      &-icon {
+        span {
+          margin: 0 2px;
+          font-size: size(sm) - 0.3rem;
+          color: $grey2;
+        }
+      }
+    }
+  }
+}

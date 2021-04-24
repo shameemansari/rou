@@ -1,4 +1,5 @@
 const navbar = document.querySelector('.navbar');
+const blogcard = document.querySelectorAll('.blog-card');
 
 window.addEventListener('scroll', (e) => {
   if (window.innerWidth < 992) {
@@ -32,4 +33,16 @@ window.addEventListener('resize', (e) => {
       navbar.classList.remove('show');
     }
   }
+});
+
+blogcard.forEach((element, index) => {
+  element.addEventListener('click', function (e) {
+    var current = index;
+    element.classList.add('active');
+    blogcard.forEach((e, i) => {
+      if (current != i) {
+        e.classList.remove('active');
+      }
+    });
+  });
 });

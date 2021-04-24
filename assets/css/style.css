@@ -1430,10 +1430,22 @@ img {
   margin: 2rem auto 0.6rem;
 }
 
+@media screen and (max-width: 480px) {
+  .testimonial .person-title {
+    text-align: center;
+  }
+}
+
 .testimonial .person-subtitle {
   font-size: 1.35rem;
   color: #808080a4;
   font-weight: 800;
+}
+
+@media screen and (max-width: 480px) {
+  .testimonial .person-subtitle {
+    text-align: center;
+  }
 }
 
 .testimonial-content {
@@ -1541,7 +1553,7 @@ img {
 
 @media screen and (max-width: 767px) {
   .testimonial-content .testimonial-main .blockquote-content {
-    width: 90%;
+    width: 88%;
   }
 }
 
@@ -1551,6 +1563,7 @@ img {
   font-family: sans-serif;
   content: '‘‘';
   width: 8rem;
+  min-height: 4rem;
   text-align: center;
   color: #c5cae9;
   font-size: 11rem;
@@ -1561,9 +1574,9 @@ img {
 
 @media screen and (max-width: 767px) {
   .testimonial-content .testimonial-main .blockquote::after {
-    width: 10%;
+    width: 12%;
     top: -2.4rem;
-    font-size: 6rem;
+    font-size: 5.8rem;
   }
 }
 

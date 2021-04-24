@@ -116,11 +116,13 @@
     position: relative;
     overflow: hidden;
     background: linear-gradient(to top, rgba($overlay-3, 0.8), transparent 40%);
+
     > .row {
       min-height: 50rem;
       @include flexrowcenter;
       padding: 4rem 1rem;
     }
+
     .testimonial-bg {
       z-index: -2;
       position: absolute;

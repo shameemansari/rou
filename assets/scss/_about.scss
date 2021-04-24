@@ -1,7 +1,7 @@
 .about {
-  min-height: 100vh;
+  min-height: 75rem;
   width: 100%;
-  padding: 10% 0;
+  padding: 20rem 0;
   position: relative;
   .styleelement {
     z-index: 1;
@@ -177,7 +177,7 @@
 
 .team {
   padding: 20px 0 10px;
-  min-height: 60vh;
+  min-height: 50rem;
   @include flexrowcenter;
   &-left {
     padding: 20px 0;

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -573,9 +574,9 @@ img {
 
 /********** Style Elements*********/
 .about {
-  min-height: 100vh;
+  min-height: 75rem;
   width: 100%;
-  padding: 10% 0;
+  padding: 20rem 0;
   position: relative;
 }
 
@@ -806,7 +807,7 @@ img {
 
 .team {
   padding: 20px 0 10px;
-  min-height: 60vh;
+  min-height: 50rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -943,7 +944,7 @@ img {
 
 /********** Trust End*********/
 .service {
-  min-height: 100vh;
+  min-height: 75rem;
   width: 100%;
   position: relative;
   z-index: 2 !important;
@@ -1102,7 +1103,7 @@ img {
 }
 
 .work {
-  min-height: 100vh;
+  min-height: 75rem;
   width: 100%;
   background-color: rgba(237, 241, 247, 0.8);
   position: relative;
@@ -1324,25 +1325,46 @@ img {
   z-index: -1;
 }
 
+.testimonial .circle {
+  height: 350px;
+  width: 350px;
+  z-index: 1 !important;
+  border-radius: 50%;
+  position: absolute;
+  z-index: -2;
+}
+
+.testimonial .circle-pink1 {
+  top: -15%;
+  left: -5%;
+  background: radial-gradient(rgba(255, 102, 135, 0.1), rgba(255, 102, 135, 0.06), rgba(255, 102, 135, 0.04), transparent 80%);
+}
+
+.testimonial .circle-blue1 {
+  top: 15%;
+  left: 5%;
+  background: radial-gradient(rgba(0, 174, 239, 0.1), rgba(0, 174, 239, 0.05), transparent 80%);
+}
+
 .testimonial .arrow {
   position: absolute;
   max-width: 2.3rem;
-  top: 24rem;
-  left: 24rem;
+  top: 9%;
+  left: 15%;
 }
 
 .testimonial .shape {
   position: absolute;
   max-width: 8rem;
   top: 50%;
-  left: 14rem;
+  left: 3%;
 }
 
 .testimonial .triangle {
   position: absolute;
   max-width: 3rem;
-  top: 58%;
-  left: 19.35rem;
+  top: 54.8%;
+  left: 6.5%;
 }
 
 .testimonial .zigzag {
@@ -1354,8 +1376,8 @@ img {
 
 .testimonial .square {
   position: absolute;
-  height: 3rem;
-  width: 3rem;
+  height: 2.5rem;
+  width: 2.5rem;
   border: 4px solid #00aeef;
   bottom: -1rem;
   right: 15%;
@@ -1430,6 +1452,7 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 4rem 1rem;
 }
 
 .testimonial-content .testimonial-bg {
@@ -1461,10 +1484,9 @@ img {
 .testimonial-content .testimonial-image {
   min-height: 45rem;
   position: relative;
-  background-color: pink;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 767px) {
   .testimonial-content .testimonial-image {
     min-height: 32rem;
   }
@@ -1500,4 +1522,90 @@ img {
     -webkit-transform: translateX(-65%);
             transform: translateX(-65%);
   }
+}
+
+.testimonial-content .testimonial-main .blockquote {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.testimonial-content .testimonial-main .blockquote-content {
+  width: calc(100% - 8rem);
+  margin-left: auto;
+  padding-left: 1rem;
+}
+
+@media screen and (max-width: 767px) {
+  .testimonial-content .testimonial-main .blockquote-content {
+    width: 90%;
+  }
+}
+
+.testimonial-content .testimonial-main .blockquote::after {
+  z-index: 1;
+  position: absolute;
+  font-family: sans-serif;
+  content: '‘‘';
+  width: 8rem;
+  text-align: center;
+  color: #c5cae9;
+  font-size: 11rem;
+  font-weight: 800;
+  top: -4.5rem;
+  left: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .testimonial-content .testimonial-main .blockquote::after {
+    width: 10%;
+    top: -2.4rem;
+    font-size: 6rem;
+  }
+}
+
+.testimonial-content .testimonial-main .blockquote p {
+  font-size: 1.7rem;
+  margin: 1rem 0 3rem;
+}
+
+@media screen and (max-width: 480px) {
+  .testimonial-content .testimonial-main .blockquote p {
+    font-size: 1.5rem;
+  }
+}
+
+.testimonial-content .testimonial-main .blockquote cite {
+  position: relative;
+  padding-left: 3rem;
+  font-style: inherit;
+  display: inline-block;
+  font-size: 1.7rem;
+  font-weight: 800;
+}
+
+@media screen and (max-width: 480px) {
+  .testimonial-content .testimonial-main .blockquote cite {
+    font-size: 1.5rem;
+  }
+}
+
+.testimonial-content .testimonial-main .blockquote cite::before {
+  position: absolute;
+  content: '';
+  height: 1px;
+  border-radius: 5px;
+  width: 1.3rem;
+  background-color: #111111;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.testimonial-content .testimonial-main .blockquote cite span {
+  margin: 0 1rem;
+  font-weight: 400;
+  color: grey;
+  font-size: 1.3rem;
 }

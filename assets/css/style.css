@@ -1967,6 +1967,12 @@ img {
   z-index: 1;
 }
 
+@media screen and (max-width: 767px) {
+  .blog {
+    padding: 4rem 0;
+  }
+}
+
 .blog .z-index-1 {
   z-index: -1;
 }
@@ -2201,8 +2207,226 @@ img {
 }
 
 .footer {
-  min-height: 45rem;
+  height: 100%;
   width: 100%;
   overflow: hidden;
+  background-color: #fdfdfc;
+  padding: 2rem 0 0;
   z-index: 2;
+}
+
+.footer-content {
+  min-height: 35rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer-content > div {
+  padding: 1.5rem 1rem;
+  min-height: 21rem;
+}
+
+@media screen and (max-width: 480px) {
+  .footer-content > div {
+    min-height: auto;
+  }
+}
+
+.footer-content-first img {
+  max-width: 10rem;
+}
+
+.footer-content-first p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.3rem;
+  margin: 2rem 0;
+}
+
+.footer-content-first .submit-email {
+  background-color: #edf1f7;
+  padding: 1rem;
+  height: 4rem;
+  width: 90%;
+  border-radius: 5px;
+  position: relative;
+}
+
+.footer-content-first .submit-email input {
+  width: 90%;
+  position: absolute;
+  border: none;
+  background-color: transparent;
+  padding: 0.5rem 2rem;
+  top: 0;
+  left: 0;
+  height: 4rem;
+  font-size: 1.2rem;
+  color: #696969;
+}
+
+.footer-content-first .submit-email i {
+  width: 10%;
+  color: #696969;
+  font-size: 1.6rem;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.footer-content-list h3 {
+  font-weight: 800;
+  padding-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.footer-content-list li {
+  margin: 0.5rem 0;
+}
+
+.footer-content-list li a {
+  font-family: 'Poppins', sans-serif;
+  text-decoration: none;
+  color: #696969;
+  text-transform: capitalize;
+  font-size: 1.1rem;
+}
+
+.footer-content-icon-list h3 {
+  font-weight: 800;
+  padding-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.footer-content-icon-list li {
+  margin: 2rem 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.footer-content-icon-list li i {
+  color: #696969;
+  font-size: 1.1rem;
+  width: 12%;
+  margin-top: 0.25rem;
+}
+
+.footer-content-icon-list li span {
+  width: 88%;
+  font-size: 1.2rem;
+}
+
+.footer-end {
+  width: 85%;
+  padding: 1rem;
+  margin: 0 auto 2rem;
+  font-family: 'Poppins', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+  .footer-end {
+    width: 100%;
+  }
+}
+
+.footer-end-social {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+  .footer-end-social {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.footer-end-social h3 {
+  font-size: 1.3rem;
+  font-weight: 800;
+}
+
+.footer-end-social .icons {
+  margin-left: 2rem;
+}
+
+.footer-end-social .icons a {
+  text-decoration: none;
+  color: #fdfdfc;
+  margin: 0 0.5rem;
+}
+
+.footer-end-social .icons a .fab {
+  font-size: 1.4rem;
+}
+
+.footer-end-social .icons a .fab-1 {
+  color: #3b5998;
+}
+
+.footer-end-social .icons a .fab-2 {
+  color: #1da1f2;
+}
+
+.footer-end-social .icons a .fab-3 {
+  color: #ff1e00;
+}
+
+.footer-end-social .icons a .fab-4 {
+  color: #e16353;
+}
+
+.footer-end-rights {
+  text-align: right;
+  width: 60%;
+}
+
+@media screen and (max-width: 767px) {
+  .footer-end-rights {
+    width: 100%;
+    margin: 1rem 0;
+    text-align: center;
+  }
+}
+
+.footer-end-rights p {
+  font-size: 1.2rem;
+  color: #696969;
+}
+
+.footer-end-rights p span {
+  color: #111111;
+  font-weight: 800;
 }

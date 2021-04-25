@@ -1,5 +1,6 @@
 const navbar = document.querySelector('.navbar');
 const blogcard = document.querySelectorAll('.blog-card');
+const navbarcollapse = document.querySelector('.navbar-collapse');
 
 window.addEventListener('scroll', (e) => {
   if (window.innerWidth < 992) {
@@ -45,4 +46,12 @@ blogcard.forEach((element, index) => {
       }
     });
   });
+});
+
+window.addEventListener('click', (e) => {
+  let target = e.target;
+  var _mobileMenuOpen = navbarcollapse.classList.contains('show');
+  if (_mobileMenuOpen === true && !target.classList.contains('navbar-toggler')) {
+    navbarcollapse.classList.remove('show');
+  }
 });

@@ -2253,13 +2253,7 @@ img {
 
 .footer-content > div {
   padding: 1.5rem 1rem;
-  min-height: 21rem;
-}
-
-@media screen and (max-width: 480px) {
-  .footer-content > div {
-    min-height: auto;
-  }
+  min-height: 20rem;
 }
 
 .footer-content-first img {

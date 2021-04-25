@@ -12,10 +12,7 @@
     align-items: center;
     > div {
       padding: 1.5rem 1rem;
-      min-height: 21rem;
-      @include mobile {
-        min-height: auto;
-      }
+      min-height: 20rem;
     }
 
     &-first {

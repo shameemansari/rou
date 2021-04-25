@@ -192,7 +192,7 @@
           margin-left: auto;
           padding-left: 1rem;
           @include tablet {
-            width: 88%;
+            width: 90%;
           }
         }
         &::after {
@@ -201,7 +201,6 @@
           font-family: sans-serif;
           content: '‘‘';
           width: 8rem;
-          min-height: 4rem;
           text-align: center;
           color: #c5cae9;
           font-size: 11rem;
@@ -209,9 +208,9 @@
           top: -4.5rem;
           left: 0;
           @include tablet {
-            width: 12%;
-            top: -2.4rem;
-            font-size: 5.8rem;
+            width: 10%;
+            top: -1.3rem;
+            font-size: 3.5rem;
           }
         }
         p {
@@ -247,6 +246,9 @@
             font-weight: 600;
             color: $grey2;
             font-size: size(sm) - 0.2rem;
+            @include mobile {
+              margin: 0 0.2rem;
+            }
           }
         }
       }

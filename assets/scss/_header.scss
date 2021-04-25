@@ -51,9 +51,11 @@
   .icons {
     margin: auto 10px;
     @include flexrowcenter;
-
     &-item {
       margin: 5px 7px;
+      @include tablet {
+        margin: 1rem 1.5rem;
+      }
     }
 
     &-link {
@@ -270,8 +272,10 @@
       background: radial-gradient(rgba($accent-pink, 0.1), rgba($accent-pink, 0.06), rgba($accent-pink, 0.04), transparent 80%);
     }
     &-blue1 {
+      height: 60rem;
+      width: 60rem;
       top: 15%;
-      left: 5%;
+      left: 3%;
       background: radial-gradient(rgba($accent-blue, 0.1), rgba($accent-blue, 0.05), transparent 80%);
     }
     &-blue2 {

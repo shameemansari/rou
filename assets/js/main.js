@@ -1,15 +1,23 @@
 const navbar = document.querySelector('.navbar');
 const blogcard = document.querySelectorAll('.blog-card');
 const navbarcollapse = document.querySelector('.navbar-collapse');
+const topbtn = document.querySelector('.top-btn');
 
 window.addEventListener('scroll', (e) => {
   if (window.innerWidth < 992) {
     navbar.classList.add('show');
+    if (window.pageYOffset > 20) {
+      topbtn.classList.add('show');
+    } else {
+      topbtn.classList.remove('show');
+    }
   } else {
     if (window.pageYOffset > 0) {
       navbar.classList.add('show');
+      topbtn.classList.add('show');
     } else {
       navbar.classList.remove('show');
+      topbtn.classList.remove('show');
     }
   }
 });
@@ -54,4 +62,8 @@ window.addEventListener('click', (e) => {
   if (_mobileMenuOpen === true && !target.classList.contains('navbar-toggler')) {
     navbarcollapse.classList.remove('show');
   }
+});
+
+topbtn.addEventListener('click', (e) => {
+  window.scrollTo(0, 0);
 });

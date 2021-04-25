@@ -105,3 +105,26 @@ img {
     background-color: $primary-color;
   }
 }
+
+.top-btn {
+  position: fixed;
+  display: none;
+  cursor: pointer;
+  z-index: 1200;
+  right: 3rem;
+  bottom: 3rem;
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 3px;
+  background-color: rgba($primary-color, 0.85);
+  text-align: center;
+  i {
+    margin: 1rem 0;
+    color: $white;
+    font-size: size(sm) - 0.2rem;
+  }
+  &.show {
+    transition: all 0.5s ease-in-out;
+    display: block;
+  }
+}

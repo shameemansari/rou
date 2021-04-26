@@ -2446,7 +2446,8 @@ img {
   color: #696969;
 }
 
-.footer-end-rights p span {
+.footer-end-rights p a {
   color: #111111;
+  text-decoration: none;
   font-weight: 800;
 }

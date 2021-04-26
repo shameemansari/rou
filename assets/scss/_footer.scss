@@ -162,8 +162,9 @@
       p {
         font-size: size(sm) - 0.3rem;
         color: $grey;
-        span {
+        a {
           color: $black;
+          text-decoration: none;
           font-weight: 800;
         }
       }
